@@ -1,36 +1,16 @@
 import React from "react";
 import "./App.css";
-import logo from "./assets/logo.svg";
-import Emoji from "./emoji/index";
+import logo from "./assets/logo.svg"; 
+import Routes from "./routes" 
 
 function App() {
-  function handleSubmit(event) {
-    event.preventDefault()
-    
-
-  }
-
   return (
     <div className="container">
       <img src={logo} width="90px" height="90px" alt="Internet Banking" />
       <div className="content">
-        <p>Efetue operações bancárias com simplicidade</p>
+        <Routes>
 
-        <p>
-          <Emoji label="sheep" symbol="🌐💰" />
-        </p>
-
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">E-mail *</label>
-          <input 
-            type="email"
-            id="email"
-            placeholder="Digite seu melhor email"
-          />
-          <button className="btn" type="submit">
-            Entrar
-          </button>
-        </form>
+        </Routes>
       </div>
     </div>
   );
