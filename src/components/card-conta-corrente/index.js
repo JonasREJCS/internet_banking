@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import Emoji from "../../components/emoji";
+import Emoji from "../emoji";
 
-export default function SaldoAtual({ history }) {
+export default function CardContaCorrente({ history }) {
   function onClick(event) {
     event.preventDefault();
     history.push("/");
