@@ -3,19 +3,16 @@ import React, { Component } from "react";
 class Table extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      transacoes: [
-      ]
-    };
+    this.state = { transacoes: [] };
   }
- 
+
   componentDidMount() {
-    fetch('https://5ddd54f0f40ae700141e91dd.mockapi.io/api/v1/transacoes')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ transacoes: data })
-    })
-    .catch(console.log)
+    fetch("https://5ddd54f0f40ae700141e91dd.mockapi.io/api/v1/transacoes")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ transacoes: data });
+      })
+      .catch(console.log);
   }
 
   renderTableData() {
