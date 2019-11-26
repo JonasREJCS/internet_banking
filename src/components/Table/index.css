@@ -1,0 +1,22 @@
+#parent_div_1, #parent_div_2{
+    width:600px;
+    height:30px;
+    margin-right:10px;
+    float:right;
+}
+.child_div_1{
+    float:right;
+    margin-right:5px;
+    font-size: 12px;
+}
+
+.child_div_2{
+    float:right;
+    margin-right:5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.valor {
+    font-size: 25px;
+}
