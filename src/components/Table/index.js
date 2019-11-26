@@ -5,31 +5,17 @@ class Table extends Component {
     super(props);
     this.state = {
       transacoes: [
-        { id: 1, tipoTransacao: "Depósito", valor: 120000, data: "20 nov" },
-        { id: 2, tipoTransacao: "Saque", valor: -2000, data: "21 nov" },
-        {
-          id: 3,
-          tipoTransacao: "Transferência enviada",
-          valor: -9000,
-          data: "22 nov"
-        },
-        { id: 4, tipoTransacao: "Débito", valor: -500, data: "23 nov" },
-        {
-          id: 5,
-          tipoTransacao: "Transferência Recebida",
-          valor: 7000,
-          data: "20 nov"
-        },
-        { id: 6, tipoTransacao: "Boleto Pago", valor: -1500, data: "21 nov" },
-        {
-          id: 7,
-          tipoTransacao: "Transferência enviada",
-          valor: -1400,
-          data: "22 nov"
-        },
-        { id: 8, tipoTransacao: "Débito", valor: -1365, data: "23 nov" }
       ]
     };
+  }
+ 
+  componentDidMount() {
+    fetch('https://5ddd54f0f40ae700141e91dd.mockapi.io/api/v1/transacoes')
+    .then(res => res.json())
+    .then((data) => {
+      this.setState({ transacoes: data })
+    })
+    .catch(console.log)
   }
 
   renderTableData() {
